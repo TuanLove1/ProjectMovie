@@ -1,0 +1,3 @@
+export const LISTMOVIE_REQUEST = 'reducer/LISTMOVIE_REQUEST';
+export const LISTMOVIE_SUCCESS = 'reducer/LISTMOVIE_SUCCESS';
+export const LISTMOVIE_FAILED = 'reducer/LISTMOVIE_FAILED';

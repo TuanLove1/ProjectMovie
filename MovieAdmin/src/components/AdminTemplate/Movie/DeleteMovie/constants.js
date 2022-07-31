@@ -1,0 +1,3 @@
+export const DELETE_MOVIE_REQUEST = 'reducer/DELETE_MOVIE_REQUEST ';
+export const DELETE_MOVIE_SUCCESS = 'reducer/DELETE_MOVIE_SUCCESS';
+export const DELETE_MOVIE_FAILED = 'reducer/DELETE_MOVIE_FAILED';

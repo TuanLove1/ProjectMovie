@@ -1,0 +1,30 @@
+table,
+th,
+td {
+    border: 1px solid #96D4D4;
+    padding: 3px;
+    background-color: white;
+}
+.table__user{
+    width: 100%;
+}
+td{
+    font-size: 13px;
+}
+.xoa{
+    background-color: red;
+    color: white;
+    width: 20px;
+    height: 20px;
+    line-height: 20px !important;
+    border-radius: 5px;
+}
+.edit{
+    background-color: blue;
+    color: white;
+    width: 20px;
+    height: 20px;
+    line-height: 20px !important;
+    border-radius: 5px;
+    margin-left: 5px;
+}

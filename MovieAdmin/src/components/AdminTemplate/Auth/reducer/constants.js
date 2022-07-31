@@ -1,0 +1,3 @@
+export const LOGIN_MOVIE_REQUEST = 'reducer/LOGIN_MOVIE_REQUEST'
+export const LOGIN_MOVIE_SUCCESS = 'reducer/LOGIN_MOVIE_SUCCESS'
+export const LOGIN_MOVIE_FAILED = 'reducer/LOGIN_MOVIE_FAILED'

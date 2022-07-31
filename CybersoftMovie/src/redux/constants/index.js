@@ -1,0 +1,19 @@
+export const SET_CAROUSEL = "SET_CAROUSEL";
+export const GET_LIST_MOVIE = "GET_LIST_MOVIE";
+export const SET_FILM_DANG_CHIEU = "SET_FILM_DANG_CHIEU";
+export const SET_FILM_SAP_CHIEU = "SET_FILM_SAP_CHIEU";
+export const SET_HE_THONG_RAP_CHIEU = "SET_HE_THONG_RAP_CHIEU";
+export const SET_CHI_TIET_PHIM = "SET_CHI_TIET_PHIM";
+export const DANG_NHAP = "DANG_NHAP";
+export const SET_CHI_TIET_PHONG_VE = "SET_CHI_TIET_PHONG_VE";
+export const DAT_VE = "DAT_VE";
+export const SET_THONG_TIN_NGUOUI_DUNG = "SET_THONG_TIN_NGUOUI_DUNG";
+
+export const DISPLAY_LOADING = "DISPLAY_LOADING";
+export const HIDE_LOADING = "HIDE_LOADING";
+export const DAT_VE_DONE = "DAT_VE_DONE";
+
+export const CHUYEN_TAB = "CHUYEN_TAB";
+export const CHUYEN_TAB_ACTIVE = "CHUYEN_TAB_ACTIVE";
+
+export const CLOSE_MODAL_USER = "CLOSE_MODAL_USER";

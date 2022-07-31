@@ -1,0 +1,3 @@
+export const UPDATE_MOVIE_REQUEST = 'reducer/UPDATE_MOVIE_REQUEST';
+export const UPDATE_MOVIE_SUCCESS = 'reducer/UPDATE_MOVIE_SUCCESS';
+export const UPDATE_MOVIE_FAILED = 'reducer/UPDATE_MOVIE_FAILED';

@@ -1,0 +1,30 @@
+.ghe {
+    width:35px;
+    height:35px;
+    border:none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin:10px;
+    background-color: rgb(123, 122, 122);
+    color:#fff;
+  }
+
+  .gheDaDat {
+    background-color: rgb(232,76,76);
+    cursor: no-drop;
+  }
+
+  .gheDangDat {
+    background-color: rgb(37, 174, 37)!important;
+  }
+
+  .gheVip {
+    background-color: rgb(211, 141, 12);
+  }
+  /* duoc dat by tyn */
+  .gheDaDuocDat {
+    background-color: blueviolet;
+    color:#fff;
+  }
+
+  

@@ -1,0 +1,112 @@
+.circle {
+    width: 30px;
+    height: 30px;
+    background-color: #242424;
+    border-radius: 50%;
+    display: inline-block;
+    
+    position: absolute;
+    
+    animation: changeColor 300ms ease;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    
+    /* For slower animation */
+  /*   animation-duration: 3s;  */
+  }
+  
+  .circle:nth-child(1) {
+    top: 0;
+    left: 0;
+  }
+  
+  .circle:nth-child(2) {
+    top: 19px;
+    left: 32px;
+   
+    animation-delay: .166s;
+    
+    /* For slower animation */
+  /*   animation-delay: .5s; */
+  }
+  
+  .circle:nth-child(3) {
+    top: 54px;
+    left: 32px;
+    
+    animation-delay: .33s;
+    
+    /* For slower animation */
+  /*   animation-delay: 1s; */
+  }
+  
+  .circle:nth-child(4) {
+    top: 73px;
+    left: 0;
+    
+    animation-delay: .499s;
+    
+    /* For slower animation */
+  /*   animation-delay: 1.5s; */
+  }
+  
+  .circle:nth-child(5) {
+    top: 54px;
+    left: -32px;
+  
+    animation-delay: .666s;
+    
+    /* For slower animation */
+  /*   animation-delay: 2s; */
+  }
+  
+  .circle:nth-child(6) {
+    top: 19px;
+    left: -32px;
+  
+    animation-delay: .833s;
+    
+    /* For slower animation */
+  /*   animation-delay: 2.5s; */
+  }
+  
+  @keyframes changeColor {
+    0% {
+      background-color: #242424;
+    }
+    
+    20% {
+      background-color: white;
+    }
+    
+    /* For slower animation */
+  /*   60% {
+      background-color: #242424;
+    } */
+  
+    100% {
+      background-color: #242424;
+    }
+  }
+  
+  /* Center layout */
+  /* body {
+    margin: 0;
+    background-color: black;
+  } */
+  
+  .parent {
+    position: relative;
+    height: 100vh;
+  }
+  
+  .child {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    display: block;
+    height: 93px;
+  }
+  

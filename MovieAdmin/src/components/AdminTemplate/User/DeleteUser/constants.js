@@ -1,0 +1,3 @@
+export const DELETE_USER_REQUEST = 'reducer/DELETE_USER_REQUEST';
+export const DELETE_USER_SUCCESS = 'reducer/DELETE_USER_SUCCESS';
+export const DELETE_USER_FAILED = 'reducer/DELETE_USER_FAILED';

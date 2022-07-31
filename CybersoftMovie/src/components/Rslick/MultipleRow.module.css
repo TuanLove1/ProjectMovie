@@ -1,0 +1,18 @@
+.slick-prev:before, .slick-next:before {
+    color:#A78BFA !important;
+    font-size: 3rem !important;
+} 
+
+.width-item {
+    width:100% !important;
+}
+
+.active_Film {
+    @apply dark:bg-[#753BBD] dark:text-white;
+}
+.none_active_Film {
+    @apply dark:bg-gray-100 dark:text-gray-800;
+}
+
+
+ 
