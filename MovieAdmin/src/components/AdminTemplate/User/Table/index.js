@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { actDeleteUser } from '../DeleteUser/actions';
 import { actEditUser } from '../EditUser/reducer/actions';
 const Table = ({ users, loading, navigate }) => {
+    console.log(users);
     let dispatch = useDispatch()
     if (loading) {
         return <h2>Loading...</h2>;

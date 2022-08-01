@@ -65,7 +65,7 @@ export default function AddUser() {
                 blur={3} // default blur value is 10px
                 borderRadius={0} // default border radius value is 10px
             >
-                <h1 style={{color:'white'}}>Thêm Người Dùng Quản Lý</h1>
+                <h1 style={{color:'white'}}>Thêm Người Dùng</h1>
                 <form  onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', width:'80%',marginLeft:'10%',color:'#00d8ff;'}}>
                     <label>
                         Tài khoản:

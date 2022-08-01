@@ -1,0 +1,3 @@
+export const UPDATE_USER_REQUEST = 'reducer/UPDATE_REQUEST';
+export const UPDATE_USER_SUCCESS = 'reducer/UPDATE_USER_SUCCESS';
+export const UPDATE_USER_FAILED = 'reducer/UPDATE_USER_FAILED';
