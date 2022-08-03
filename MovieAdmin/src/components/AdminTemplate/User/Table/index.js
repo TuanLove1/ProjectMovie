@@ -16,7 +16,7 @@ const Table = ({ users, loading, navigate }) => {
             <td>{user.soDT}</td>
             <td>{user.matKhau}</td>
             <td>{user.maLoaiNguoiDung}</td>
-            <td>
+            <td className='mobile_action'>
                 <i onClick={() => {
                     console.log(user.taiKhoan);
                     dispatch(actDeleteUser(user.taiKhoan))

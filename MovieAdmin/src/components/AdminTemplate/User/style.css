@@ -30,3 +30,14 @@ td{
     border-radius: 5px;
     margin-left: 5px;
 }
+@media only screen and (max-width: 1023px) {
+    h1 {
+      font-size: 30px;
+    }
+   
+    .mobile_action{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+  }

@@ -66,7 +66,7 @@ export default function User(props) {
               navigate('/admin/add-user')
             }} className='mb-2' variant="contained">Thêm người dùng</Button>
             <Search onChange={handleOnChange} className='mb-2' placeholder="Tìm kiếm" enterButton />
-            <div>
+            <div style={{overflowX:'auto'}}>
               <table style={{ width: '100%', textAlign: 'center' }}>
                 <thead>
                   <tr>
@@ -82,8 +82,11 @@ export default function User(props) {
                 </thead>
                 <tbody>
                   {
-                  !search ? <Table navigate={navigate} users={currentUsers} loading={loading} /> :
-                  <TableSearch navigate={navigate} usersSearch={prop.data} loading={loading} />
+                    !search
+                      ?
+                      <Table navigate={navigate} users={currentUsers} loading={loading} />
+                      :
+                      <TableSearch navigate={navigate} usersSearch={prop.data} loading={loading} />
                   }
                 </tbody>
               </table>
