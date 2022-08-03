@@ -31,11 +31,11 @@
        </tr>
       <tr>
        <td>Nguyễn Trần Thái Duy</td>
-       <td>https://github.com/thaiduy1704</td>
+       <td>https://github.com/thaiduy1704/CybersoftMovie</td>
      </tr>
       <tr>
        <td>Nguyễn Hữu Tuấn  </td>
-        <td>https://github.com/TuanLove1</td>
+        <td>https://github.com/TuanLove1/MovieAdmin</td>
         </tr>
       
 </table>
