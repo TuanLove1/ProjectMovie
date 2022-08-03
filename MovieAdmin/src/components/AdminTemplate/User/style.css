@@ -18,13 +18,15 @@ td{
     height: 20px;
     line-height: 20px !important;
     border-radius: 5px;
+    cursor: pointer;
 }
 .edit{
-    background-color: blue;
+    background-color: rgb(24, 144, 255);
     color: white;
     width: 20px;
     height: 20px;
     line-height: 20px !important;
+    cursor: pointer;
     border-radius: 5px;
     margin-left: 5px;
 }

@@ -1,0 +1,3 @@
+export const SEARCH_USER_REQUEST = 'reducer/SEARCH_USER_REQUEST';
+export const SEARCH_USER_SUCCESS = 'reducer/SEARCH_USER_SUCCESS';
+export const SEARCH_USER_FAILED = 'reducer/SEARCH_USER_FAILED';

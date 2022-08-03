@@ -2,12 +2,13 @@ import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { actDeleteUser } from '../DeleteUser/actions';
 import { actEditUser } from '../EditUser/reducer/actions';
-const Table = ({ users, loading, navigate }) => {
+const TableSearch = ({ usersSearch, loading, navigate }) => {
     let dispatch = useDispatch()
     if (loading) {
         return <h2>Loading...</h2>;
     }
-    return users?.map((user, index) => {
+    console.log(usersSearch);
+    return usersSearch?.map((user, index) => {
         return <tr key={index}>
             <td>{index}</td>
             <td>{user.taiKhoan}</td>
@@ -31,4 +32,4 @@ const Table = ({ users, loading, navigate }) => {
     })
 };
 
-export default Table;
+export default TableSearch;

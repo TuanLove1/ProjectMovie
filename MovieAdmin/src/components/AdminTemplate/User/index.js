@@ -1,5 +1,5 @@
 import { Button } from '@mui/material'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Input } from 'antd';
 import Table from './Table/index';
 import Pagination from './Pagination/index';
@@ -7,6 +7,9 @@ import './style.css'
 import { api } from '../../../api/apiUtil';
 import { useNavigate } from 'react-router-dom';
 import { CustomCard } from '@tsamantanis/react-glassmorphism';
+import { actSearchUser } from './SearchUser/actions';
+import { useDispatch, useSelector } from 'react-redux';
+import TableSearch from './TableSearch';
 export default function User(props) {
   let navigate = useNavigate()
   const { Search } = Input;
@@ -14,7 +17,10 @@ export default function User(props) {
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [usersPerPage] = useState(10);
-
+  const [search, setSearch] = useState('');
+  let dispatch = useDispatch();
+  let prop = useSelector((state) => state.searchUserReducer)
+  console.log(prop.data);
   useEffect(() => {
     const fetchUsers = async () => {
       setLoading(true);
@@ -25,7 +31,17 @@ export default function User(props) {
 
     fetchUsers();
   }, []);
+  let searchRef = useRef(null)
 
+  const handleOnChange = (e) => {
+    if (searchRef.current) {
+      clearTimeout(searchRef.current)
+    }
+    searchRef.current = setTimeout(() => {
+      setSearch(e.target.value)
+      dispatch(actSearchUser(e.target.value))
+    }, 300)
+  }
   // Get current posts
   const indexOfLastUser = currentPage * usersPerPage;
   const indexOfFirstUser = indexOfLastUser - usersPerPage;
@@ -39,7 +55,7 @@ export default function User(props) {
       <div className='row'>
         <div className='col l-12'>
           <CustomCard className="form_mobile"
-            
+
             effectColor='rgba(54, 215, 183, 1)' // required
             color="#14AEFF" // default color is white
             blur={5} // default blur value is 10px
@@ -49,7 +65,7 @@ export default function User(props) {
             <Button onClick={() => {
               navigate('/admin/add-user')
             }} className='mb-2' variant="contained">Thêm người dùng</Button>
-            <Search className='mb-2' placeholder="Tìm kiếm" enterButton />
+            <Search onChange={handleOnChange} className='mb-2' placeholder="Tìm kiếm" enterButton />
             <div>
               <table style={{ width: '100%', textAlign: 'center' }}>
                 <thead>
@@ -65,7 +81,10 @@ export default function User(props) {
                   </tr>
                 </thead>
                 <tbody>
-                  <Table navigate={navigate} users={currentUsers} loading={loading} />
+                  {
+                  !search ? <Table navigate={navigate} users={currentUsers} loading={loading} /> :
+                  <TableSearch navigate={navigate} usersSearch={prop.data} loading={loading} />
+                  }
                 </tbody>
               </table>
             </div>

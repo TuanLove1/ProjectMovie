@@ -25,7 +25,6 @@ export default function EditMovie() {
     const [imgSrc, setImg] = useState('')
     let navigate = useNavigate()
     const props = useSelector((state) => state.infoMovieReducer)
-    console.log(props);
     const dispatch = useDispatch();
     const params = useParams();
     const { data } = props;

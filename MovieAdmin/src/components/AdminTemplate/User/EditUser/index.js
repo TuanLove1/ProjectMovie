@@ -10,7 +10,7 @@ class EditUser extends Component {
       email: this.props.email,
       soDt: this.props.soDT,
       maNhom: 'GP10',
-      maLoaiNguoiDung: 'KhachHang',
+      maLoaiNguoiDung: 'Khách Hàng!',
       hoTen: this.props.hoTen,
     }
   }
@@ -23,7 +23,7 @@ class EditUser extends Component {
     let { value, id } = e.target;
     let newValue = { ...this.state.value };
     newValue[id] = value;
-
+    console.log(newValue);
     this.setState({
       value: newValue,
     })
@@ -36,7 +36,6 @@ class EditUser extends Component {
     })
   }
   render() {
-    console.log(this.props);
     let { taiKhoan, matKhau, email, soDT, maNhom, maLoaiNguoiDung, hoTen } = this.state.value;
     return (
       <div style={{ display: 'flex', justifyContent: 'center' }}>
@@ -53,7 +52,7 @@ class EditUser extends Component {
             <label>
               Tài khoản:
             </label>
-            <input id='taiKhoan' value={taiKhoan} name='taiKhoan' type="text" onChange={this.handleOnChange}
+            <input id='taiKhoan' disabled value={taiKhoan} name='taiKhoan' type="text" onChange={this.handleOnChange}
             />
             <label>Mật khẩu:
             </label>
@@ -83,9 +82,16 @@ class EditUser extends Component {
   }
 }
 const mapStateToProps = (rootReducer) => {
-
   return {
-    user: rootReducer.editUserReducer.data
+    user: {
+      "taiKhoan": rootReducer.editUserReducer.data?.taiKhoan,
+      "matKhau": rootReducer.editUserReducer.data?.matKhau,
+      "email": rootReducer.editUserReducer.data?.email,
+      "soDT": rootReducer.editUserReducer.data?.soDT,
+      "maNhom": rootReducer.editUserReducer.data?.maNhom,
+      "maLoaiNguoiDung": rootReducer.editUserReducer.data?.maLoaiNguoiDung,
+      "hoTen": rootReducer.editUserReducer.data?.hoTen
+    }
   }
 }
 const mapDispatchToProps = (dispatch) => {

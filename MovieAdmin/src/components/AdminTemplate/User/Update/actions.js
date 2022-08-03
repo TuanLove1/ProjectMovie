@@ -21,6 +21,13 @@ export const actUpdateUser = (user) =>{
         .catch((error)=>{
             console.log(error.response.data);
             dispatch(actUpdateFailed(error))
+            const MySwal = withReactContent(Swal)
+            MySwal.fire({
+                title: <strong>Update thất bại</strong>,
+                html: <i>{error.response.data.content}</i>,
+                icon: 'error',
+                show: false
+            });
         })
     }
 }
