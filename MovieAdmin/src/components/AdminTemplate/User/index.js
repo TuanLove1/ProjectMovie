@@ -17,7 +17,7 @@ export default function User(props) {
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [usersPerPage] = useState(10);
-  const [search, setSearch] = useState('');
+  const [search, setSearch ] = useState('');
   let dispatch = useDispatch();
   let prop = useSelector((state) => state.searchUserReducer)
   console.log(prop.data);
@@ -38,7 +38,7 @@ export default function User(props) {
       clearTimeout(searchRef.current)
     }
     searchRef.current = setTimeout(() => {
-      setSearch(e.target.value)
+       setSearch(e.target.value)
       dispatch(actSearchUser(e.target.value))
     }, 300)
   }
