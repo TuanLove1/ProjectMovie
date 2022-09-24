@@ -61,3 +61,6 @@
         </tr>
       
 </table>
+<h2>Tài khoản,mật khẩu đăng nhập Admin</h2>
+<p>Tk:testabcd</p>
+<p>Mk:123456</p>
